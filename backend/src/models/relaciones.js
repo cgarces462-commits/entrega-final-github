@@ -29,13 +29,3 @@ ModelAprendiz.hasOne(ModelUsuario, { foreignKey: 'aprendiz_id', as: 'usuario' })
 // Ref: usuario.instructor_id - instructor.id (uno a uno)
 ModelUsuario.belongsTo(ModelInstructor, { foreignKey: 'instructor_id', as: 'instructor' });
 ModelInstructor.hasOne(ModelUsuario, { foreignKey: 'instructor_id', as: 'usuario' });
-
-export {
-  ModelPrograma,
-  ModelFicha,
-  ModelInstructor,
-  ModelAprendiz,
-  ModelRegistroIngreso,
-  ModelUsuario,
-  ModelFichaInstructor,
-};
