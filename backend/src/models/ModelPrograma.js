@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { conn } from '../config/database.js';
 
-export const Instructor = conn.define('instructor', {
+export const ModelPrograma = conn.define('programa', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -11,22 +11,18 @@ export const Instructor = conn.define('instructor', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  apellido: {
+  nivel_formacion: {
+    // Tecnólogo, Técnico
     type: DataTypes.STRING,
     allowNull: false,
   },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-  },
-  especialidad: {
-    type: DataTypes.STRING,
+  duracion_meses: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
 }, {
-  tableName: 'instructor',
+  tableName: 'programa',
   timestamps: false,
 });
 
-export default Instructor;
+export default ModelPrograma;

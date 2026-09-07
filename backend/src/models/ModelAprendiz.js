@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { conn } from '../config/database.js';
 
-export const Aprendiz = conn.define('aprendiz', {
+export const ModelAprendiz = conn.define('aprendiz', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -48,4 +48,4 @@ export const Aprendiz = conn.define('aprendiz', {
   timestamps: false,
 });
 
-export default Aprendiz;
+export default ModelAprendiz;
