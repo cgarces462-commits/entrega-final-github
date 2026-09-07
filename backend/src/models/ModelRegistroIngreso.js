@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { conn } from '../config/database.js';
 
-export const RegistroIngreso = conn.define('registro_ingreso', {
+export const ModelRegistroIngreso = conn.define('registro_ingreso', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -25,4 +25,4 @@ export const RegistroIngreso = conn.define('registro_ingreso', {
   timestamps: false,
 });
 
-export default RegistroIngreso;
+export default ModelRegistroIngreso;

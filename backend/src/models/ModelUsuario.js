@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { conn } from '../config/database.js';
 
-export const Usuario = conn.define('usuario', {
+export const ModelUsuario = conn.define('usuario', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -44,4 +44,4 @@ export const Usuario = conn.define('usuario', {
   timestamps: false,
 });
 
-export default Usuario;
+export default ModelUsuario;
