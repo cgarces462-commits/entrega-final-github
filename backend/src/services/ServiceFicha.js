@@ -1,6 +1,6 @@
 import {
     crearFicha, obtenerFicha, obtenerFichaNumeroFicha, actualizarFicha, eliminarFicha
-} from "../repositories/RepositoryFicha";
+} from "../repositories/RepositoryFicha.js";
 
 export function registrarFicha(data) {
     if (!data.numero_ficha) {

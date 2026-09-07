@@ -8,26 +8,26 @@ export function registrarUsuario(data) {
 }
 
 export function listarUsaurios() {
-    return obtenerUsuarios()
+    return obtenerUsuario()
 }
 
 export function modificarUsuario(data, id) {
     if (!id) {
-        return new Promise.reject(new Error("El ID es obligatorio..."))
+        return Promise.reject(new Error("El ID es obligatorio..."))
     }
     return actualizarUsuario(data, id)
 }
 
 export function borrarUsuario(id) {
     if (!id) {
-        return new Promise.reject(new Error("El ID es obligatorio..."))
+        return Promise.reject(new Error("El ID es obligatorio..."))
     }
     return eliminarUsuario(id)
 }
 
 export function consultarUsuarioCorreo(correo) {
     if (!correo) {
-        return new Promise.reject(new Error("Correo obligatorio..."))
+        return Promise.reject(new Error("Correo obligatorio..."))
     }
-    return obtenerUsuarioCorreo(correo)
+    return obtenerUsuarioEmail(correo)
 }
