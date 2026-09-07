@@ -1,0 +1,1 @@
+import { CONN } from "./src/config/database.js";
