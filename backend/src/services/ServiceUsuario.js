@@ -1,4 +1,4 @@
-import { crearUsuario, obtenerUsuario, eliminarUsuario, actualizarUsuario, obtenerUsuarioEmail } from "../repositories/RepositoryUsuario.js";
+import { actualizarUsuario, crearUsuario, eliminarUsuario, obtenerUsuario, obtenerUsuarioEmail } from "../repositories/RepositoryUsuario.js";
 
 export function registrarUsuario(data) {
     if (!data.correo || !data.nombre || !data.apellido || !data.contrasena) {
@@ -8,7 +8,7 @@ export function registrarUsuario(data) {
 }
 
 export function listarUsaurios() {
-    return obtenerUsuarios()
+    return obtenerUsuario()
 }
 
 export function modificarUsuario(data, id) {
@@ -27,7 +27,7 @@ export function borrarUsuario(id) {
 
 export function consultarUsuarioCorreo(correo) {
     if (!correo) {
-        return new Promise.reject(new Error("Correo obligatorio..."))
+        return Promise.reject(new Error("Correo obligatorio..."))
     }
-    return obtenerUsuarioCorreo(correo)
+    return obtenerUsuarioEmail(correo)   
 }
